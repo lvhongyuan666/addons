@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="auto_number_view_form" model="ir.ui.view">
+    	<field name="name">11</field>
+    	<field name="model">auto_number.test</field>
+    	<field name="priority" eval="16"/>
+    	<field name="arch" type="xml">
+    		<form string="">
+                <sheet>
+                     <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <field name="reason"/>
+                </sheet>
+
+
+    		</form>
+    	</field>
+    </record>
+
+    <record id="auto_number_action" model="ir.actions.act_window">
+    	<field name="name">创建单据</field>
+    	<field name="res_model">auto_number.test</field>
+    	<field name="view_type">form</field>
+    	<field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+    	id="auto_number_menu_root"
+    	name="test auto"
+    	sequence="5"
+        action="auto_number_action"
+    />
+
+</odoo>
